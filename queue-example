@@ -15,7 +15,7 @@ void display(std::queue<T> q) {
     std::cout << "]" << std::endl;
 }
 
-void display(std::queue<int> &q) {
+void display(std::queue<int> q) {
     std::cout << "[ ";
     while (!q.empty()) {
         auto elem = q.front();
@@ -25,7 +25,7 @@ void display(std::queue<int> &q) {
     std::cout << "]" << std::endl;
 }
 
-void display(std::queue<std::string>& s) {
+void display(std::queue<std::string> s) {
     std::cout << "[";
     while (!s.empty()) {
         auto elem = s.front();
