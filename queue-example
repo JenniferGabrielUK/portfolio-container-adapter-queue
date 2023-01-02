@@ -72,5 +72,21 @@ int main()
         q1.pop();
     display(q1);
     std::cout << "Size: " << q1.size() << std::endl;
+       q.push(10);
+    q.push(100);
+    q.push(1000);
+    q.push(10001);
+    display(q);
+    std::cout << "Size: " << q.size() << std::endl;
+    q1.push("C++");
+    q1.push("Coding");
+    q1.push("is");
+    q1.push("awesome.");
+    display(q1);
+    std::cout << "Size: " << q1.size() << std::endl;
+    std::cout << "Front: " << q.front() << std::endl;
+    std::cout << "Back: " << q.back() << std::endl;
+    std::cout << "Front: " << q1.front() << std::endl;
+    std::cout << "Back: " << q1.back() << std::endl;
     return 0;
 }
