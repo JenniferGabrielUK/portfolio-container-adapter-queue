@@ -1,0 +1,51 @@
+// portofolio-container-adapter-queue.cpp : This file contains the 'main' function. Program execution begins and ends there.
+#include <iostream>
+#include <queue>
+#include <algorithm>
+#include <string>
+
+template<typename T>
+void display(std::queue<T> q) {
+    std::cout << "[ ";
+    while (!q.empty()) {
+        T elem = q.front();
+        q.pop();
+        std::cout << elem << " ";
+    }
+    std::cout << "]" << std::endl;
+}
+
+void display(std::queue<int> &q) {
+    std::cout << "[ ";
+    while (!q.empty()) {
+        auto elem = q.front();
+        q.pop();
+        std::cout << elem << " ";
+    }
+    std::cout << "]" << std::endl;
+}
+
+void display(std::queue<std::string>& s) {
+    std::cout << "[";
+    while (!s.empty()) {
+        auto elem = s.front();
+        s.pop();
+        std::cout << elem << " ";
+    }
+    std::cout << "]" << std::endl;
+}
+
+int main()
+{
+    std::queue<int> q;
+    for (int i : {1, 2, 3, 4, 5})
+        q.push(i);
+    display(q);
+    std::queue<std::string> q1;
+    q1.push("Jenny");
+    q1.push("Elizabeth");
+    q1.push("Gabriel");
+    display(q1);
+
+    return 0;
+}
