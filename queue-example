@@ -46,6 +46,23 @@ int main()
     q1.push("Elizabeth");
     q1.push("Gabriel");
     display(q1);
-
+      std::cout << "Front: " << q.front() << std::endl;
+    std::cout << "Back: " << q.back() << std::endl;
+    std::cout << "Front: " << q1.front() << std::endl;
+    std::cout << "Back: " << q1.back() << std::endl;
+    q.push(101);
+    display(q);
+    q.pop();
+    q.pop();
+    display(q);
+    q1.push("Jennifer");
+    display(q1);
+    q1.pop();
+    q1.pop();
+    display(q1);
+    std::cout << "Front: " << q.front() << std::endl;
+    std::cout << "Back: " << q.back() << std::endl;
+    std::cout << "Front: " << q1.front() << std::endl;
+    std::cout << "Back: " << q1.back() << std::endl;
     return 0;
 }
