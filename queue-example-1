@@ -29,7 +29,23 @@ void display_queue(std::queue<std::string> q) {
 }
 
 int main() {
+	std::cout << std::setw(30) << std::left << std::setfill('-') << "\n" << std::endl;
+	std::queue<double> q;
+	for (double i : {1.1, 2.1, 3.1, 4.1, 5.1})
+		q.push(i);
+	display_queue(q);
+	std::vector <double> num_set;
+	while (!q.empty()) {
+	auto elem = q.front();
+	num_set.push_back(elem);
+	q.pop();
+	}
+	std::cout << "[ ";
+	for (auto i : num_set) {
+		std::cout << i << ", ";
+	}
+	std::cout << " ]" << std::endl;
+	display_queue(q);
 
-  
-  return 0;
+	return 0;
 }
